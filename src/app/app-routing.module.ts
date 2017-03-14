@@ -7,6 +7,7 @@ import { FlowDesignerComponent} from './modules/flowDesign/flowDesigner.componen
 import { SeismicDriveComponent } from './modules/seismicDrive/seismicDrive.component';
 import { JobListComponent } from './modules/jobList/jobList.component';
 import { ViewerComponent } from './modules/viewer/viewer.component';
+import {JobDetailsComponent} from './modules/dataView/JobDetails.component';
 
 const routes: Routes = [
      //{path:'departments', component:DepartmentListComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
    {path:'flowdesigner', component: FlowDesignerComponent},
    {path:'joblist', component: JobListComponent},
    {path:'viewer', component: ViewerComponent},
+   {path:'jobdetails', component: JobDetailsComponent}
 ];
 
 @NgModule({
@@ -33,4 +35,4 @@ const routes: Routes = [
 export class AppRoutingModule{}
 
 //export const routingComponents=[DepartmentListComponent, EmployeeListComponent]
-export const routingComponents=[DashboardComponent, FlowDesignerComponent,SeismicDriveComponent,JobListComponent,ViewerComponent]
+export const routingComponents=[DashboardComponent, FlowDesignerComponent,SeismicDriveComponent,JobListComponent,ViewerComponent, JobDetailsComponent]

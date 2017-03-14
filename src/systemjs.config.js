@@ -38,10 +38,10 @@
       rxjs: {
         defaultExtension: 'js'
       },
-  'angular2-datatable': {
-    main: './index.js',
-    defaultExtension: 'js'
-  }
+     'angular2-datatable': {
+		main: './index.js',
+		defaultExtension: 'js'
+	}
     }
   });
 })(this);

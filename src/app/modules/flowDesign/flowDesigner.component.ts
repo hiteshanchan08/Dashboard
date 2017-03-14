@@ -4,4 +4,6 @@ import {Component} from '@angular/core';
     selector:'flowDesigner-list',
     templateUrl: "./flowDesign.html"
 })
-export class FlowDesignerComponent{}
+export class FlowDesignerComponent{
+    retrievedImgName=localStorage.getItem("imgName");
+}
