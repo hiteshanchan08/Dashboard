@@ -29,7 +29,7 @@ export class JobListComponent{
             .subscribe((data)=> {
                 setTimeout(()=> {
                     this.data = data.json();
-                    this.dataContent =  data.json();
+                    //this.dataContent =  data.json();
                 }, 2000);
             });
     }
