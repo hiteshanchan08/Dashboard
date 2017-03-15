@@ -2,6 +2,8 @@ import {Component} from '@angular/core';
 import {MaterialService} from "./../../material.service";
 import {Material} from "./../../material";
 import {Http} from "@angular/http";
+import {JobDetailsComponent} from './../dataView/JobDetails.component';
+import {Router} from '@angular/router';
 /// <reference path="../jquery.d.ts"/>
 
 @Component({
@@ -15,7 +17,7 @@ export class JobListComponent{
     materials: Material[];
     errorMessage: string;
     searchText: string = "";
-    constructor(private http: Http) {
+    constructor(private http: Http, private router:Router) {
         //this.materials = new Array<Material>();
     }
     public data: any[];
@@ -62,7 +64,9 @@ export class JobListComponent{
     }
 
     public view(item:any) {
+		this.router.navigate(['/jobdetails']);
+        localStorage.setItem("Data", JSON.stringify(item));
 		//window.open("http://google.com", '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
-          alert(" The details are Flow Name : "+ item.mname +"  and Submitted By : "+ item.uom);
+          //alert(" The details are Flow Name : "+ item.mname +"  and Submitted By : "+ item.uom);
     }
 }
