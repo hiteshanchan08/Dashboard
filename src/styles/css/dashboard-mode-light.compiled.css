@@ -521,7 +521,7 @@ div.slb-toggle-switch--color-mode .toggle-switch-track :last-child.slb-icon {
 	right: 0px;
 }
 .navigation-framework {
-	background: rgb(57, 65, 77); height: 100vh; display: flex; flex-direction: column; -webkit-box-orient: vertical; -webkit-box-direction: normal;
+	background: rgb(57, 65, 77); height: 100%; display: flex; flex-direction: column; -webkit-box-orient: vertical; -webkit-box-direction: normal;
 }
 .navigation-framework .framework-sub-nav {
 	padding: 0px 40px; height: 50px; color: rgb(153, 166, 181); display: flex; flex-shrink: 0; justify-content: flex-end; align-items: center; -webkit-box-align: center; -webkit-box-pack: end;
@@ -545,7 +545,7 @@ div.slb-toggle-switch--color-mode .toggle-switch-track :last-child.slb-icon {
 	padding: 0px; display: flex; flex-grow: 1; -webkit-box-flex: 1;
 }
 .navigation-framework .framework-content-view {
-	background: rgb(241, 244, 249); transition:margin-left 0.5s ease-out; height: calc(100vh - 50px); display: flex; position: relative; border-top-left-radius: 5px; box-shadow: 0px 0px 50px rgba(0,0,0,0.5); flex-direction: column; flex-grow: 1; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-box-flex: 1; -webkit-transition: margin-left 0.5s ease-out;
+	background: rgb(241, 244, 249); transition:margin-left 0.5s ease-out; height: 100%; display: flex; position: relative; border-top-left-radius: 5px; box-shadow: 0px 0px 50px rgba(0,0,0,0.5); flex-direction: column; flex-grow: 1; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-box-flex: 1; -webkit-transition: margin-left 0.5s ease-out;
 }
 .navigation-framework .open.framework-content-view {
 	margin-left: -180px;
@@ -839,10 +839,10 @@ div.slb-table table tr:last-of-type td {
 	border: currentColor; border-image: none;
 }
 div.slb-dashboard {
-	height: calc(100vh - 140px); display: flex; flex-direction: column; -webkit-box-orient: vertical; -webkit-box-direction: normal;
+	height:100%; display: flex; flex-direction: column; -webkit-box-orient: vertical; -webkit-box-direction: normal;
 }
 div.slb-dashboard .view-container {
-	-ms-overflow-y: scroll;
+	-ms-overflow-y: scroll;background-color: rgb(251, 251, 251);
 }
 div.slb-dashboard .view {
 	margin: 40px 30px 20px; display: flex; flex-wrap: wrap;

@@ -17,7 +17,7 @@ export class JobListComponent{
     materials: Material[];
     errorMessage: string;
     searchText: string = "";
-    constructor(private http: Http, private router:Router) {
+    constructor(private service: MaterialService,private http: Http, private router:Router) {
         //this.materials = new Array<Material>();
     }
     public data: any[];
@@ -27,36 +27,13 @@ export class JobListComponent{
     public sortOrder = "asc";
 
    ngOnInit() {
-      this.http.get("/app/data.json")
-            .subscribe((data)=> {
-                setTimeout(()=> {
-                    this.data = data.json();
-                    //this.dataContent =  data.json();
-                }, 2000);
-            });
+      this.service.getMaterials().subscribe(
+            data => this.data = data,
+            error => this.errorMessage = <any>error
+        );
     }
-    
-    
-    
-    /* promise(data: Material[]) {
-    
-    for (var index = 0; index < data.length; index++) {
-        let widthV:any = data[index].toq;
-       
-       $('.bar')[index].style.width = widthV+"%";
-      if(data[index].status == "Error") {
-          $('.slb-progress-indicator')[index].className = "slb-progress-indicator warning";
-           $('.bar')[index].style.width = "100%";
-      } else {
-          $('.slb-progress-indicator')[index].className = "slb-progress-indicator positive"
-      }
-       
-        
-    }
-    
-} */
-    
-     public remove(item:any) {
+   
+   public remove(item:any) {
         let index = this.data.indexOf(item);
         if(index>-1) {
             this.data.splice(index, 1);
@@ -64,9 +41,7 @@ export class JobListComponent{
     }
 
     public view(item:any) {
-		this.router.navigate(['/jobdetails']);
+        this.router.navigate(['/jobdetails']);
         localStorage.setItem("Data", JSON.stringify(item));
-		//window.open("http://google.com", '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
-          //alert(" The details are Flow Name : "+ item.mname +"  and Submitted By : "+ item.uom);
     }
 }

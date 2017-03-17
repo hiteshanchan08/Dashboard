@@ -1,30 +1,17 @@
 <DIV class="info" id="jobsTable">
-<DIV class="slb-table" style="margin-left:30px; margin-right:41px">
+<DIV class="slb-table">
 <DIV class="slb-table-heading">
-<H2>My Job List</H2><BUTTON class="slb-button icon-only">
-<DIV class="slb-icon"><svg xmlns="http://www.w3.org/2000/svg"><use xmlns:xlink="http://www.w3.org/1999/xlink" 
-xlink:href="#icon-add" />                    </svg>                  
-</DIV></BUTTON>                 </DIV>
+<H2>My Job List</H2><tr><th colspan="1.5"><input placeholder="Filter by Flow Name" class="form-control" [(ngModel)]="searchText"/>
+</th>
+                </tr>                  </DIV>
 
  <div id="menu2" class="tab-pane fade in active slb-table-container">
     <br/><br/>
-    <div class="slb-table-container" style="height:460px;">
+    <div class="slb-table-container">
             <!-- <h3>My Job List</h3> -->
          <table class="table table-striped" [mfData]="data" #mf="mfDataTable"
                    [mfRowsOnPage]="rowsOnPage" [(mfSortBy)]="sortBy" [(mfSortOrder)]="sortOrder">
-            <!--<thead>
-                <tr>
-<th style="background-color:#F4F5F9;color:#555452;font-size:15px;">Job ID<span class="caret"></span></th>
-<th style="background-color:#F4F5F9;color:#555452;font-size:15px;">Flow ID<span class="caret"></span></th>
-<th style="background-color:#F4F5F9;color:#555452;font-size:15px;">Flow Name <span onClick = "document.getElementById('myInput').style.display = 'block'" class="caret"></span><input hidden id="myInput" type="text" [(ngModel)]="searchText"/></th>
-<th style="background-color:#F4F5F9;color:#555452;font-size:15px;">Progress<span class="caret"></span></th>
-<th style="background-color:#F4F5F9;color:#555452;font-size:15px;">Status<span class="caret"></span></th>
-<th style="background-color:#F4F5F9;color:#555452;font-size:15px;">Date Submitted<span class="caret"></span></th>
-<th style="background-color:#F4F5F9;color:#555452;font-size:15px;">Submitted By<span class="caret"></span></th>
-<th style="background-color:#F4F5F9;color:#555452;font-size:15px;">Last Updated<span class="caret"></span></th>
-<th style="background-color:#F4F5F9;color:#555452;font-size:15px;">Actions<span class="caret"></span></th>
-                </tr>
-                </thead>-->
+            
                 <thead>
                 <tr>
                    <th style="width: 5%">
@@ -55,23 +42,18 @@ xlink:href="#icon-add" />                    </svg>
                         Actions
                     </th>
                </tr>
-			   <!-- <tr>
-                    <th colspan="5">
-                        Filter by name:
-                        <input class="form-control" [(ngModel)]="searchText"/>
-                    </th>
-                </tr> -->
+			   
                 
                 </thead>
                 <tbody>
-                    <tr *ngFor="let item of mf.data">
+                    <tr *ngFor="let item of (mf.data | search : searchText)">
                     <td style="padding-left: 10px;">{{item.mid}}</td>
                     <td >{{item.flowId}}</td>
                     <td >{{item.mname}}</td>
-                    <td class="item"><DIV class="slb-progress-indicator positive"><SPAN 
+                    <td class="item"><DIV class="{{item.style}}" ><SPAN 
       class="value">{{item.toq}}%</SPAN>                 
       <DIV class="wrap">
-      <DIV class="bar" style="width: 50%;"></DIV></DIV>
+      <DIV class="bar" [style.width]="(item.toq/100)*100 + '%'"></DIV></DIV>
       <DIV class="meta"></DIV></DIV></td>
                     <td >{{item.status}}</td>
                     <td >{{item.tsq}}</td>

@@ -8,11 +8,16 @@ import {Router} from '@angular/router';
     templateUrl: "./dashboardView.html"
 })
 export class DashboardComponent{
+	
      constructor( private router:Router) {}
+	 ngOnInit() {
+		$('.slb-table').css({"margin-left": "30px","margin-right": "54px"});
+    }
 	getimageData(bannerImg:any) {
         this.router.navigate(['/flowdesigner']);
         bannerImg = event.currentTarget;
         let imgName = bannerImg.offsetParent.innerText;
         localStorage.setItem("imgName", imgName);
     }
+	
 }
