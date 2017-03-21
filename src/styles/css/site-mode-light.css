@@ -638,7 +638,7 @@ body.overlay {
 	overflow: hidden;
 }
 body::before {
-	width: 100%; height: 440px; position: absolute; z-index: -1; content: ""; pointer-events: none; background-color: rgb(19, 111, 213);
+	width: 100%; height: 440px; position: absolute; z-index: -1; content: ""; pointer-events: none; background-color: rgb(240, 242, 247);
 }
 body.pattern {
 	background: url("/assets/images/background.svg") no-repeat 50% 440px / cover rgb(41, 47, 55);

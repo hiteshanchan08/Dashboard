@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Angular QuickStart</title>
+    <title>Dashboard</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="/">
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/css/global-mode-light.css">
     <link rel="stylesheet" href="styles/css/prism.css">
     <link rel="stylesheet" href="styles/css/site-mode-light.css">
-    <link rel="stylesheet" href="node_modules/datatables.net-dt/css/jquery.dataTables.css">
+  <!--   <link rel="stylesheet" href="node_modules/datatables.net-dt/css/jquery.dataTables.css"> -->
     
 
     <!-- Polyfill(s) for older browsers -->
@@ -21,8 +21,8 @@
 
     <script src="node_modules/zone.js/dist/zone.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/datatables.net/js/jquery.dataTables.js"></script>
+   <!--  <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/datatables.net/js/jquery.dataTables.js"></script> -->
 
 
     <script src="systemjs.config.js"></script>
@@ -34,8 +34,8 @@
     <script src="styles/js/bootstrap.min.js"></script>
 
     <script src="styles/js/__mock__.js"></script>
-    <script src="styles/js/dashboard.compiled.js"></script>
-    <script src="styles/js/global.js"></script>
+   <!--  <script src="styles/js/dashboard.compiled.js"></script>
+    <script src="styles/js/global.js"></script> -->
     <script src="styles/js/site.js"></script>
     <script src="styles/js/vendor.js"></script>
     
@@ -47,6 +47,16 @@
   </head>
 
   <body>
-    <my-app>Loading AppComponent content here ...</my-app>
+    <my-app><div id="fountainG" style="margin-top:250px;">
+	<div id="fountainG_1" class="fountainG"></div>
+	<div id="fountainG_2" class="fountainG"></div>
+	<div id="fountainG_3" class="fountainG"></div>
+	<div id="fountainG_4" class="fountainG"></div>
+	<div id="fountainG_5" class="fountainG"></div>
+	<div id="fountainG_6" class="fountainG"></div>
+	<div id="fountainG_7" class="fountainG"></div>
+	<div id="fountainG_8" class="fountainG"></div>
+</div>
+<div id="fountainTextG"><div id="fountainTextG_1" class="fountainTextG">L</div><div id="fountainTextG_2" class="fountainTextG">o</div><div id="fountainTextG_3" class="fountainTextG">a</div><div id="fountainTextG_4" class="fountainTextG">d</div><div id="fountainTextG_5" class="fountainTextG">i</div><div id="fountainTextG_6" class="fountainTextG">n</div><div id="fountainTextG_7" class="fountainTextG">g</div></div></my-app>
   </body>
 </html>

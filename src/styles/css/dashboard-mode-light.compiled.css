@@ -818,7 +818,7 @@ div.slb-table .slb-table-container {
 	padding: 0px 20px;
 }
 div.slb-table table {
-	width: 100%; border-collapse: collapse; table-layout: fixed;
+	width: inherit; border-collapse: collapse; table-layout: fixed;
 }
 div.slb-table table tr {
 	line-height: 50px;
